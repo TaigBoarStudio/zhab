@@ -1,0 +1,124 @@
+/* 
+  Master Theme Configuration 
+  Change these variables to update the overall style of the application.
+*/
+
+/* --- RECIPE 1: Tea Ritual (Active) --- */
+:root {
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Philosopher", serif;
+
+  /* Light Theme (Default) */
+  --color-ink-950: #1C1C1B; /* Primary Text */
+  --color-ink-900: rgba(28, 28, 27, 0.7); /* Secondary Text */
+  --color-ink-800: rgba(28, 28, 27, 0.5);
+
+  --color-paper-50: #FBF9F4; /* Soft Cream */
+  --color-paper-100: #F5F2EA; /* Background */
+  --color-paper-200: #EDE9DE; /* Subtle Depth */
+
+  --color-gold-300: #D99A5B;
+  --color-gold-400: #CE8A43;
+  --color-gold-500: #C47A2C; /* Accent */
+  
+  --color-jade-500: #C47A2C;
+  --color-jade-600: #FBF9F4;
+
+  --color-candle-bg: #F4F1EA;
+  --color-candle-ink: #1F1F1E;
+  --color-candle-gold: #C47A2C;
+
+  --border-radius: 12px;
+  --noise-opacity: 0.02;
+  --parchment-opacity: 0.05;
+}
+
+.dark {
+  /* Dark Theme */
+  --color-ink-950: #DEDFDA; /* Primary Text */
+  --color-ink-900: rgba(222, 223, 218, 0.65); /* Secondary Text */
+  --color-ink-800: rgba(222, 223, 218, 0.4);
+
+  --color-paper-50: #1A1A1A; /* Surfaces */
+  --color-paper-100: #0F0F0F; /* Background */
+  --color-paper-200: #141414; /* Depth */
+
+  --color-gold-300: #D99A5B;
+  --color-gold-400: #CE8A43;
+  --color-gold-500: #C47A2C; /* Accent */
+  
+  --color-jade-500: #C47A2C;
+  --color-jade-600: #363737;
+
+  --color-candle-bg: #111212;
+  --color-candle-ink: #DEDFDA;
+  --color-candle-gold: #C47A2C;
+
+  --noise-opacity: 0.04;
+  --parchment-opacity: 0.01;
+}
+
+/* --- RECIPE 2: Classic Tea (Uncomment to use) --- */
+/*
+:root {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-display: "Philosopher", ui-serif, Georgia, serif;
+
+  --color-ink-950: #2C1810;
+  --color-ink-900: #3D2B1F;
+  --color-ink-800: #4E3D32;
+
+  --color-paper-50: #fbf8f3;
+  --color-paper-100: #f4ece1;
+  --color-paper-200: #e8dfd1;
+
+  --color-gold-300: #d4af37;
+  --color-gold-400: #c5a028;
+  --color-gold-500: #A67C37;
+  
+  --color-jade-500: #2d4a3e;
+  --color-jade-600: #1e332a;
+
+  --color-candle-bg: #1a120b;
+  --color-candle-ink: #e8dfd1;
+  --color-candle-gold: #c5a028;
+
+  --border-radius: 2px;
+  --noise-opacity: 0.03;
+  --parchment-opacity: 0.1;
+}
+*/
+
+/* --- RECIPE 3: Brutalist / Creative (Uncomment to use) --- */
+/*
+:root {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-serif: "Space Grotesk", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-ink-950: #000000;
+  --color-ink-900: #000000;
+  --color-ink-800: #000000;
+
+  --color-paper-50: #ffffff;
+  --color-paper-100: #ffffff;
+  --color-paper-200: #ffffff;
+
+  --color-gold-300: #00ff00;
+  --color-gold-400: #00ff00;
+  --color-gold-500: #00ff00;
+  
+  --color-jade-500: #00ff00;
+  --color-jade-600: #00ff00;
+
+  --color-candle-bg: #000000;
+  --color-candle-ink: #00ff00;
+  --color-candle-gold: #00ff00;
+
+  --border-radius: 0;
+  --noise-opacity: 0.05;
+  --parchment-opacity: 0;
+}
+*/

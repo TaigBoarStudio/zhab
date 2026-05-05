@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "./styles/theme.css";
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
+
+  --color-ink-950: var(--color-ink-950);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-800: var(--color-ink-800);
+
+  --color-paper-50: var(--color-paper-50);
+  --color-paper-100: var(--color-paper-100);
+  --color-paper-200: var(--color-paper-200);
+
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  
+  --color-jade-500: var(--color-jade-500);
+  --color-jade-600: var(--color-jade-600);
+
+  --color-candle-bg: var(--color-candle-bg);
+  --color-candle-ink: var(--color-candle-ink);
+  --color-candle-gold: var(--color-candle-gold);
+}
+
+/* Improve readability of low-opacity text in dark mode */
+.dark .text-ink-900\/40, 
+.dark .text-ink-950\/40 {
+  opacity: 0.6;
+}
+
+.dark .text-ink-900\/60, 
+.dark .text-ink-950\/60 {
+  opacity: 0.8;
+}
+
+.dark .text-ink-900\/80, 
+.dark .text-ink-950\/80 {
+  opacity: 0.95;
+}
+
+.dark .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .bg-paper-100\/50 {
+  background-color: rgba(26, 18, 11, 0.5);
+}
+
+.dark .bg-paper-100\/80 {
+  background-color: rgba(26, 18, 11, 0.8);
+}
+
+.dark .bg-paper-100\/90 {
+  background-color: rgba(26, 18, 11, 0.9);
+}
+
+.dark .bg-paper-50 {
+  background-color: var(--color-paper-50);
+}
+
+.dark .bg-paper-100 {
+  background-color: var(--color-paper-100);
+}
+
+.dark .bg-paper-200 {
+  background-color: var(--color-paper-200);
+}
+
+body {
+  background-color: var(--color-paper-100);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: default;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+/* Living Dark Atmosphere */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(196, 122, 44, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle Grain Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/noise-lines.png");
+  opacity: var(--noise-opacity);
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: overlay;
+}
+
+/* Structured Grid System */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* Editorial Typography */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: var(--color-ink-950);
+  line-height: 1.05;
+}
+
+/* Article Markdown Styles */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-ink-900);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.markdown-body th {
+  background: rgba(196, 122, 44, 0.1);
+  color: var(--color-gold-500);
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(196, 122, 44, 0.2);
+}
+
+.markdown-body td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.5;
+}
+
+.markdown-body tr:last-child td {
+  border-bottom: none;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  color: var(--color-gold-500);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-label::before {
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Luxury Card Styling - Obsidian Jade */
+.luxury-card {
+  background: var(--color-paper-50);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--border-radius);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  background: var(--color-jade-600);
+  border-color: var(--color-gold-500);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+/* Earth Card Styling - Simplified */
+.earth-card {
+  background: var(--color-paper-100);
+  border: 1px solid rgba(34, 197, 94, 0.1);
+  transition: all 0.6s ease;
+  border-radius: var(--border-radius);
+}
+
+.earth-card:hover {
+  background: var(--color-paper-50);
+  border-color: var(--color-gold-500);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: var(--color-gold-500);
+  color: var(--color-paper-100);
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold-400);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(196, 122, 44, 0.2);
+}
+
+/* Glass Morphism Surfaces */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Physical Paper Effect - Replaced with Obsidian Slab */
+.paper-sheet {
+  position: relative;
+  background: var(--color-paper-50);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.paper-sheet::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.05) 100%);
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
